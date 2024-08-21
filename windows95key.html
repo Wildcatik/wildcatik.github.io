@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация ключей</title>
+</head>
+<body>
+    <h1>Генерация ключей</h1>
+    <button id="generateKeys">Сгенерировать ключи</button>
+    <pre id="output"></pre>
+
+    <script>
+        function generateKey() {
+            const day = Math.floor(Math.random() * 366) + 1;
+            const year = Math.floor(Math.random() * 9) + 1995;
+            const nn = "00"; // постоянные нули
+            const sssss = generateDivisibleBy7();
+            const zzzzz = Math.floor(Math.random() * 100000);
+
+            return `${day.toString().padStart(3, '0')}${year.toString().substr(-2)}-OEM-${nn}${sssss}-${zzzzz.toString().padStart(5, '0')}`;
+        }
+
+        function generateDivisibleBy7() {
+            let num;
+            do {
+                num = Math.floor(Math.random() * 90000) + 10000; // 5-значное число
+            } while (sumOfDigits(num) % 7 !== 0);
+            return num;
+        }
+
+        function sumOfDigits(num) {
+            return num.toString().split('').reduce((sum, digit) => sum + Number(digit), 0);
+        }
+
+        document.getElementById('generateKeys').addEventListener('click', () => {
+            let keys = [];
+            for (let i = 0; i < 30; i++) {
+                keys.push(generateKey());
+            }
+            document.getElementById('output').textContent = keys.join('\n');
+        });
+    </script>
+</body>
+</html>
