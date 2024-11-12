@@ -1,23 +1,31 @@
+
 <!DOCTYPE html>
-<title>2matveya.aternos.me</title>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открытка на День матери</title>
+    <style>
+	p {color: #d71868}
+	h2 {color: #d71868;}
+        body {background-image: url('панды.jpg'); background-repeat: no-repeat; background-position:center}
+        #card { border: 1px solid #ccc; height: 886px; width: 735px; margin: auto; color: pink }
+        #message { width: 100%; height: 70px; }
+    </style>
+</head>
 <body>
-  <link type="image/x-icon" href="heart.ico" rel="icon">
-  <a href="" id="Boosty">РќР°С€ Р±СѓСЃС‚Рё</a>
-  <a href="https:\\m.youtube.com\@g22andChel9" id="YouTubeURL">YouTube</a>
+    <div id="card">
+        <h2>С праздником, любимая мама!</h2>
+        <p id="custom-message">Ваше сообщение здесь</p>
+    </div>
+    <textarea id="message" placeholder="Введите ваше сообщение..."></textarea>
+    <button onclick="updateMessage()">Создать открытку</button>
+
+    <script>
+        // Функция для обновления текста сообщения на открытке
+        function updateMessage() {
+            const message = document.getElementById('message').value;
+            document.getElementById('custom-message').innerText = message || "Ваше сообщение здесь";
+        }
+    </script>
 </body>
-<script>
-
-     const YouTube = document.getElementById('YouTubeURL');
-
-     heading.style.color = 'grey';
-
-
-</script>
-   
-<script>
-
-     const Boosty = document.getElementById('Boosty');
-
-     heading.style.color = 'grey';
-
-</script>
+</html>
