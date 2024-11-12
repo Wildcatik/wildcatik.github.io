@@ -3,28 +3,27 @@
 <html lang="ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Открытка на День матери</title>
+    <title>РћС‚РєСЂС‹С‚РєР° РЅР° Р”РµРЅСЊ РњР°С‚РµСЂРё</title>
     <style>
 	p {color: #d71868}
 	h2 {color: #d71868;}
-        body {background-image: url('панды.jpg'); background-repeat: no-repeat; background-position:center}
+        body {background-image: url('РїР°РЅРґС‹.jpg'); background-repeat: no-repeat; background-position:center}
         #card { border: 1px solid #ccc; height: 886px; width: 735px; margin: auto; color: pink }
         #message { width: 100%; height: 70px; }
     </style>
 </head>
 <body>
     <div id="card">
-        <h2>С праздником, любимая мама!</h2>
-        <p id="custom-message">Ваше сообщение здесь</p>
+        <h2>РЎ РїСЂР°Р·РґРЅРёРєРѕРј, Р»СЋР±РёРјР°СЏ РјР°РјР°!</h2>
+        <p id="custom-message">РўРІРѕРµ РїРѕР·РґСЂР°РІР»РµРЅРёРµ Р·РґРµСЃСЊ</p>
     </div>
-    <textarea id="message" placeholder="Введите ваше сообщение..."></textarea>
-    <button onclick="updateMessage()">Создать открытку</button>
+    <textarea id="message" placeholder="Р Р°РїРёС€Рё СЃРІРѕРµ РїРѕР·РґСЂР°РІР»РµРЅРёРµ Р·РґРµСЃСЊ..."></textarea>
+    <button onclick="updateMessage()">РЎРѕР·РґР°С‚СЊ РѕС‚РєСЂС‹С‚РєСѓ</button>
 
     <script>
-        // Функция для обновления текста сообщения на открытке
         function updateMessage() {
             const message = document.getElementById('message').value;
-            document.getElementById('custom-message').innerText = message || "Ваше сообщение здесь";
+            document.getElementById('custom-message').innerText = message || "РўРІРѕРµ РїРѕР·РґСЂР°РІР»РµРЅРёРµ Р·РґРµСЃСЊ";
         }
     </script>
 </body>
